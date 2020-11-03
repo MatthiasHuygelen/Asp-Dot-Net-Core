@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MovieListViewModel>
+
+
+    <h1>Movies</h1>
+
+    <a asp-controller="movie" asp-action="create">
+        Toevoegen
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:200px">Title</th>
+                <th style="width:500px">Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Description</td>
+                    <td>
+                        <a asp-controller="movie" asp-action="detail" asp-route-id="@movie.Id">
+                            <input type="button" class="btn btn-primary" value="Detail" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
