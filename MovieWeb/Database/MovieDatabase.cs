@@ -61,6 +61,8 @@ namespace MovieWeb.Database
                 movie.Title = updatedMovie.Title;
                 movie.Description = updatedMovie.Description;
                 movie.ReleaseDate = updatedMovie.ReleaseDate;
+                movie.Rating = updatedMovie.Rating;
+                movie.Genre = updatedMovie.Genre;
             }
         }
     }

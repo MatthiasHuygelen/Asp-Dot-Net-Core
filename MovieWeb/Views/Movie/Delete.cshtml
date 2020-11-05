@@ -1,0 +1,9 @@
+﻿@model MovieDeleteViewModel
+
+<p>Bent u zeker dat u @Model.Title wilt verwijderen ?</p>
+
+<form asp-controller="Movie" asp-action="ConfirmDelete" asp-route-id="@Model.Id" method="post">
+    <button class="btn btn-danger">Delete</button>
+</form>
+
+<a asp-controller="Movie" asp-action="index">Terug naar overzicht</a>

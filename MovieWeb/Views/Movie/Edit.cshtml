@@ -1,0 +1,30 @@
+﻿@model EditMovieViewModel
+
+<form asp-controller="movie" asp-action="edit" method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input class="form-control" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description" />
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Genre"></label>
+        <input class="form-control" asp-for="Genre" />
+        <span class="text-danger" asp-validation-for="Genre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate"></label>
+        <input class="form-control" asp-for="ReleaseDate" />
+        <span class="text-danger" asp-validation-for="ReleaseDate"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rating"></label>
+        <input class="form-control" asp-for="Rating" min="1" max="5" />
+        <span class="text-danger" asp-validation-for="Rating"></span>
+    </div>
+    <button class="btn btn-primary" type="submit">Toevoegen</button>
+</form>

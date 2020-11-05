@@ -82,3 +82,5 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netco
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\MovieWeb.pdb
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\MovieWeb.genruntimeconfig.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\MovieWeb.csproj.CopyComplete
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Edit.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Delete.cshtml.g.cs
