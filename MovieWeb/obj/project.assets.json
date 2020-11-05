@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\MovieWeb\\MovieWeb.csproj",
+      "projectUniqueName": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\MovieWeb\\MovieWeb.csproj",
       "projectName": "MovieWeb",
-      "projectPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\MovieWeb\\MovieWeb.csproj",
+      "projectPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\MovieWeb\\MovieWeb.csproj",
       "packagesPath": "C:\\Users\\MHGBK54\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\MovieWeb\\obj\\",
+      "outputPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\MovieWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

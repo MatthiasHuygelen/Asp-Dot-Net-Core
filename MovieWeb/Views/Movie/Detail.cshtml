@@ -5,6 +5,30 @@
 <strong>Description</strong>
 <p>@Model.Description</p>
 <strong>Genre</strong>
-<p>@Model.Genre</p>
+@if (string.IsNullOrEmpty(Model.Genre))
+{
+    <p>Er is geen genre gekend.</p> }
+else
+{
+    <p>@Model.Genre</p>
+}
+<strong>Release Date</strong>
+<p>@CalculateReleaseDateMessage(Model.ReleaseDate)</p>
 <strong>Rating</strong>
 <p>@Model.Rating / 5</p>
+
+
+
+@functions {
+    string CalculateReleaseDateMessage(DateTime releaseDate)
+    {
+        if (releaseDate.Date <= DateTime.Now.Date)
+        {
+            return "Out now!";
+        }
+        else
+        {
+            return $"Nog {Math.Ceiling((releaseDate - DateTime.Now).TotalDays)} dagen tot release.";
+        }
+    }
+}

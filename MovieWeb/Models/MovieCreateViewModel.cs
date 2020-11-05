@@ -15,7 +15,7 @@ namespace MovieWeb.Models
         public string Description { get; set; }
 
         [DisplayName("Genre")]
-        [Required, MinLength(1), MaxLength(20)]
+        [MaxLength(20)]
         public string Genre { get; set; }
 
         [DisplayName("Datum van publicatie")]

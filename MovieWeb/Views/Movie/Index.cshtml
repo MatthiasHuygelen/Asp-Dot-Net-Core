@@ -1,17 +1,22 @@
 ﻿@model IEnumerable<MovieListViewModel>
 
 
-    <h1>Movies</h1>
+<h1>Movies</h1>
 
-    <a asp-controller="movie" asp-action="create">
-        Toevoegen
-    </a>
+<a asp-controller="movie" asp-action="create">
+    Toevoegen
+</a>
 
+@if (Model == null || !Model.Any())
+{
+    <p>Er zijn geen films!</p> }
+else
+{
     <table>
         <thead>
             <tr>
-                <th style="width:200px">Title</th>
-                <th style="width:500px">Description</th>
+                <th class="header-title">Title</th>
+                <th class="header-description">Description</th>
                 <th></th>
             </tr>
         </thead>
@@ -30,3 +35,22 @@
             }
         </tbody>
     </table>
+}
+
+<style>
+    .header-title {
+        width: 200px;
+    }
+
+    .header-description {
+        width: 500px;
+    }
+
+    thead > tr {
+        font-size: 20px;
+    }
+
+    tbody > tr > td:first-of-type{
+        font-weight:bold;
+    }
+</style>

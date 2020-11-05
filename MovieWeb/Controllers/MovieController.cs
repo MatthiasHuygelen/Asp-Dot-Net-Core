@@ -32,7 +32,8 @@ namespace MovieWeb.Controllers
                 Title = movie.Title,
                 Description = movie.Description,
                 Genre = movie.Genre,
-                Rating = movie.Rating
+                Rating = movie.Rating,
+                ReleaseDate = movie.ReleaseDate
             }
             );
         }
@@ -41,7 +42,7 @@ namespace MovieWeb.Controllers
         {
             MovieCreateViewModel vm = new MovieCreateViewModel();
             vm.ReleaseDate = DateTime.Now;
-            vm.Rating = 1;
+            vm.Rating = 3;
             return View(vm);
         }
 

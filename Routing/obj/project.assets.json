@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Routing\\Routing.csproj",
+      "projectUniqueName": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\Routing\\Routing.csproj",
       "projectName": "Routing",
-      "projectPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Routing\\Routing.csproj",
+      "projectPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\Routing\\Routing.csproj",
       "packagesPath": "C:\\Users\\MHGBK54\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Routing\\obj\\",
+      "outputPath": "C:\\Users\\MHGBK54\\source\\repos\\MovieWeb\\Asp-Dot-Net-Core\\Routing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
