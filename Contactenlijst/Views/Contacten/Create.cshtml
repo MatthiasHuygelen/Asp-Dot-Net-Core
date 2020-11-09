@@ -1,0 +1,40 @@
+﻿@model ContactCreateViewModel
+
+<form asp-controller="contacten" asp-action="create" method="post">
+    <div class="form-group">
+        <label asp-for="Naam"></label>
+        <input asp-for="Naam" class="form-control" />
+        <span class="text-danger" asp-validation-for="Naam"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Voornaam"></label>
+        <input asp-for="Voornaam" class="form-control" />
+        <span class="text-danger" asp-validation-for="Voornaam"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Geboortedatum"></label>
+        <input asp-for="Geboortedatum" class="form-control" />
+        <span class="text-danger" asp-validation-for="Geboortedatum"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TelefoonNr"></label>
+        <input asp-for="TelefoonNr" class="form-control" />
+        <span class="text-danger" asp-validation-for="TelefoonNr"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adres"></label>
+        <input asp-for="Adres" class="form-control" />
+        <span class="text-danger" asp-validation-for="Adres"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Beschrijving"></label>
+        <input asp-for="Beschrijving" class="form-control" />
+        <span class="text-danger" asp-validation-for="Beschrijving"></span>
+    </div>
+    <button class="btn btn-success" type="submit">Create</button>
+</form>

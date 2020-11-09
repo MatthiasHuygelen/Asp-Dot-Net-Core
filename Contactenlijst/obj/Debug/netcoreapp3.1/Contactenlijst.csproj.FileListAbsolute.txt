@@ -34,3 +34,4 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.pdb
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.genruntimeconfig.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.csproj.CopyComplete
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Create.cshtml.g.cs
