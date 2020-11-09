@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieWeb", "MovieWeb\MovieWeb.csproj", "{BDF88740-D87F-4A2C-B116-F1F4F91F34BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{69AD4ABF-AB15-43F6-B200-BB8969167E05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routing", "Routing\Routing.csproj", "{69AD4ABF-AB15-43F6-B200-BB8969167E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contactenlijst", "Contactenlijst\Contactenlijst.csproj", "{DC5BDCC6-8C86-404D-8048-2C90E001DD64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{69AD4ABF-AB15-43F6-B200-BB8969167E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69AD4ABF-AB15-43F6-B200-BB8969167E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69AD4ABF-AB15-43F6-B200-BB8969167E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5BDCC6-8C86-404D-8048-2C90E001DD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5BDCC6-8C86-404D-8048-2C90E001DD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5BDCC6-8C86-404D-8048-2C90E001DD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5BDCC6-8C86-404D-8048-2C90E001DD64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
