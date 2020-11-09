@@ -35,3 +35,6 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.genruntimeconfig.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.csproj.CopyComplete
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Create.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Detail.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Edit.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Delete.cshtml.g.cs

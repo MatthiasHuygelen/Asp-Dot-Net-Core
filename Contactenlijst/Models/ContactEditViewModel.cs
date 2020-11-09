@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Contactenlijst.Models
 {
-    public class ContactCreateViewModel
+    public class ContactEditViewModel
     {
         [DisplayName("Naam")]
         public string LastName { get; set; }
@@ -27,7 +26,5 @@ namespace Contactenlijst.Models
         public string Adress { get; set; }
         [DisplayName("Beschrijving")]
         public string Description { get; set; }
-        [DisplayName("Foto")]
-        public IFormFile Photo { get; set; }
     }
 }

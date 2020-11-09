@@ -1,0 +1,7 @@
+﻿@model ContactDeleteViewModel
+
+<p>Wilt u echt @Model.FullName verwijderen?</p>
+
+<form asp-controller="contacten" asp-action="confirmDelete" asp-route-id="@Model.Id" method="post">
+    <button class="btn btn-danger">Delete</button>
+</form>

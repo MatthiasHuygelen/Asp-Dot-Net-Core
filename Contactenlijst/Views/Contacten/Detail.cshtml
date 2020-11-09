@@ -1,0 +1,29 @@
+﻿@model ContactDetailViewModel
+
+<label asp-for="FullName"></label>
+<p>@Model.FullName</p>
+
+<label asp-for="Adress"></label>
+<p>@Model.Adress</p>
+
+<label>Leeftijd</label>
+<p>@CalculateAge(Model.Birthdate) </p>
+
+<label asp-for="Email"></label>
+<p>@Model.Email</p>
+
+<label asp-for="Phone"></label>
+<p>@Model.Phone</p>
+
+<label asp-for="Description"></label>
+<p>@Model.Description</p>
+
+<label asp-for="PhotoUrl"></label>
+<img src="@Model.PhotoUrl" />
+
+@functions{
+    int CalculateAge(DateTime birthDate)
+    {
+        return DateTime.Now.Year - birthDate.Year;
+    }
+}

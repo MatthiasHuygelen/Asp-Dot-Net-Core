@@ -61,13 +61,13 @@ namespace Contactenlijst.Database
             var Contact = _Contacts.SingleOrDefault(x => x.Id == id);
             if (Contact != null)
             {
-                Contact.Naam = updatedContact.Naam;
-                Contact.Voornaam = updatedContact.Voornaam;
-                Contact.TelefoonNr = updatedContact.TelefoonNr;
-                Contact.Geboortedatum = updatedContact.Geboortedatum;
+                Contact.FirstName = updatedContact.FirstName;
+                Contact.LastName = updatedContact.LastName;
+                Contact.Phone = updatedContact.Phone;
+                Contact.Birthdate = updatedContact.Birthdate;
                 Contact.Email = updatedContact.Email;
-                Contact.Adres = updatedContact.Adres;
-                Contact.Beschrijving = updatedContact.Beschrijving;
+                Contact.Adress = updatedContact.Adress;
+                Contact.Description = updatedContact.Description;
             }
         }
     }
