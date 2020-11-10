@@ -68,6 +68,8 @@ namespace Contactenlijst.Database
                 Contact.Email = updatedContact.Email;
                 Contact.Adress = updatedContact.Adress;
                 Contact.Description = updatedContact.Description;
+                Contact.PhotoUrl = updatedContact.PhotoUrl;
+                Contact.Category = updatedContact.Category;
             }
         }
     }

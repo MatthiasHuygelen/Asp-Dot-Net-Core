@@ -13,6 +13,10 @@ else
         <thead>
             <tr>
                 <th>Naam</th>
+                <th>Categorie</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +24,7 @@ else
             {
             <tr>
                 <td>@item.FullName</td>
+                <td>@item.Category</td>
                 <td>
                     <a asp-controller="contacten" asp-action="detail" asp-route-id="@item.Id">Detail</a>
                 </td>

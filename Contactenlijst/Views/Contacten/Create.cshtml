@@ -37,6 +37,11 @@
         <span class="text-danger" asp-validation-for="Description"></span>
     </div>
     <div class="form-group">
+        <label asp-for="Category"></label>
+        <select asp-for="Category" asp-items="@Model.Categories" class="form-control"></select>
+        <span class="text-danger" asp-validation-for="Category"></span>
+    </div>
+    <div class="form-group">
         <label asp-for="Photo"></label>
         <input asp-for="Photo" class="form-control" />
         <span class="text-danger" asp-validation-for="Photo"></span>

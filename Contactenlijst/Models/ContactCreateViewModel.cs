@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,5 +30,14 @@ namespace Contactenlijst.Models
         public string Description { get; set; }
         [DisplayName("Foto")]
         public IFormFile Photo { get; set; }
+        [DisplayName("Categorie")]
+        public string Category { get; set; }
+
+        public IEnumerable<SelectListItem> Categories { get; set; } = new List<SelectListItem>()
+        {
+            new SelectListItem(){Text="Familie", Value="Familie" },
+            new SelectListItem(){Text="Vriend", Value="Vriend" },
+            new SelectListItem(){Text="Vijand", Value="Vijand" }
+        };
     }
 }

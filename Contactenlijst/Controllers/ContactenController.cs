@@ -7,6 +7,7 @@ using Contactenlijst.Database;
 using Contactenlijst.Domain;
 using Contactenlijst.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contactenlijst.Controllers
@@ -28,7 +29,8 @@ namespace Contactenlijst.Controllers
                 .Select(contact => new ContactListViewModel
                 {
                     Id = contact.Id,
-                    FullName = $"{contact.FirstName} {contact.LastName}"
+                    FullName = $"{contact.FirstName} {contact.LastName}",
+                    Category = contact.Category
                 });
 
 
@@ -37,10 +39,11 @@ namespace Contactenlijst.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            return View(new ContactCreateViewModel());
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(ContactCreateViewModel contact)
         {
             if (!TryValidateModel(contact))
@@ -56,12 +59,13 @@ namespace Contactenlijst.Controllers
                 Email = contact.Email,
                 Phone = contact.Phone,
                 Adress = contact.Adress,
-                Description = contact.Description
+                Description = contact.Description,
+                Category = contact.Category
             };
 
             if (contact.Photo != null)
             {
-                string uniqueFileName = UploadPhoto(contact);
+                string uniqueFileName = UploadPhoto(contact.Photo);
 
                 newContact.PhotoUrl = "/photos/" + uniqueFileName;
             }
@@ -70,15 +74,15 @@ namespace Contactenlijst.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private string UploadPhoto(ContactCreateViewModel contact)
+        private string UploadPhoto(IFormFile photo)
         {
-            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(contact.Photo.FileName);
+            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
             string pathName = Path.Combine(_hostEnvironment.WebRootPath, "photos");
             string fileNameWithPath = Path.Combine(pathName, uniqueFileName);
 
             using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
             {
-                contact.Photo.CopyTo(stream);
+                photo.CopyTo(stream);
             }
 
             return uniqueFileName;
@@ -112,7 +116,8 @@ namespace Contactenlijst.Controllers
                 Birthdate = contact.Birthdate,
                 Email = contact.Email,
                 Phone = contact.Phone,
-                Description = contact.Description
+                Description = contact.Description,
+                PhotoUrl = contact.PhotoUrl
             });
         }
 
@@ -124,7 +129,7 @@ namespace Contactenlijst.Controllers
                 return View();
             }
 
-            _contactenDatabase.Update(id, new Contact
+            var contact = new Contact
             {
                 FirstName = vm.FirstName,
                 LastName = vm.LastName,
@@ -133,9 +138,34 @@ namespace Contactenlijst.Controllers
                 Email = vm.Email,
                 Phone = vm.Phone,
                 Description = vm.Description
-            });
+            };
+
+            var dbContact = _contactenDatabase.GetContact(id);
+
+            if (vm.Photo == null)
+            {
+                contact.PhotoUrl = dbContact.PhotoUrl;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(dbContact.PhotoUrl))
+                {
+                    DeletePhoto(dbContact.PhotoUrl);
+                }
+
+                string uniqueFileName = UploadPhoto(vm.Photo);
+
+                contact.PhotoUrl = "/photos/" + uniqueFileName;
+            }
+            _contactenDatabase.Update(id, contact);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        private void DeletePhoto(string photoUrl)
+        {
+            string path = Path.Combine(_hostEnvironment.WebRootPath, photoUrl.Substring(1));
+            System.IO.File.Delete(path);
         }
 
         public IActionResult Delete([FromRoute] int id)
@@ -152,6 +182,13 @@ namespace Contactenlijst.Controllers
         [HttpPost]
         public IActionResult ConfirmDelete([FromRoute] int id)
         {
+            var contact = _contactenDatabase.GetContact(id);
+
+            if (!string.IsNullOrEmpty(contact.PhotoUrl))
+            {
+                DeletePhoto(contact.PhotoUrl);
+            }
+
             _contactenDatabase.Delete(id);
             return RedirectToAction(nameof(Index));
         }

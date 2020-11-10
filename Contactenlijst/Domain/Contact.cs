@@ -16,5 +16,6 @@ namespace Contactenlijst.Domain
         public string Adress { get; set; }
         public string Description { get; set; }
         public string PhotoUrl { get; set; }
+        public string Category { get; set; }
     }
 }
