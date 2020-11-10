@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using MovieWeb.Database;
+using System.IO;
 
 namespace MovieWeb
 {
@@ -37,7 +39,14 @@ namespace MovieWeb
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+            Path.Combine(env.ContentRootPath, "MovieCovers")),
+                RequestPath = "/MovieCovers"
+            });
 
             app.UseRouting();
 
@@ -47,7 +56,7 @@ namespace MovieWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=movie}/{action=Index}/{id?}");
             });
         }
     }

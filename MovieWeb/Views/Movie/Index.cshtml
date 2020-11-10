@@ -9,8 +9,9 @@
 
 @if (Model == null || !Model.Any())
 {
-    <p>Er zijn geen films!</p> 
-} else
+    <p>Er zijn geen films!</p>
+}
+else
 {
     <table>
         <thead>
@@ -23,29 +24,41 @@
         <tbody>
             @foreach (var movie in Model)
             {
-            <tr>
-                <td>@movie.Title</td>
-                <td>@movie.Description</td>
-                <td>
-                    <a asp-controller="movie" asp-action="detail" asp-route-id="@movie.Id">
-                        <input type="button" class="btn btn-primary" value="Detail" />
-                    </a>
-                </td>
-                <td>
-                    <a asp-controller="movie" asp-action="Edit" asp-route-id="@movie.Id">
-                        <input type="button" class="btn btn-primary" value="Edit" />
-                    </a>
-                </td>
-                <td>
-                    <a asp-controller="movie" asp-action="Delete" asp-route-id="@movie.Id">
-                        <input type="button" class="btn btn-primary" value="Delete" />
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Description</td>
+                    <td>
+                        <a asp-controller="movie" asp-action="detail" asp-route-id="@movie.Id">
+                            <input type="button" class="btn btn-primary" value="Detail" />
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="movie" asp-action="Edit" asp-route-id="@movie.Id">
+                            <input type="button" class="btn btn-primary" value="Edit" />
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="movie" asp-action="Delete" asp-route-id="@movie.Id">
+                            <input type="button" class="btn btn-primary" value="Delete" />
+                        </a>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>
 }
+
+<div style="display:flex;">
+    <div>
+        <img src="~/MovieCovers/28 Platoon.jpg" />
+    </div>
+    <div>
+        <img src="~/MovieCovers/40 Scream.jpg" />
+    </div>
+    <div>
+        <img src="~/MovieCovers/black-panther-web.jpg" />
+    </div>
+</div>
 
 <style>
     .header-title {
@@ -60,7 +73,12 @@
         font-size: 20px;
     }
 
-    tbody > tr > td:first-of-type{
-        font-weight:bold;
+    tbody > tr > td:first-of-type {
+        font-weight: bold;
+    }
+
+    img {
+        height: 250px;
+        width: 200px
     }
 </style>

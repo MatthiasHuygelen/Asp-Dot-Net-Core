@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="MovieCovers\28 Platoon.jpg" />
+    <Content Include="MovieCovers\40 Scream.jpg" />
+    <Content Include="MovieCovers\black-panther-web.jpg" />
+  </ItemGroup>
+
 </Project>
