@@ -1,13 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using MovieWeb.Database;
-using System.IO;
+using UitgaveBeheer.Database;
 
-namespace MovieWeb
+namespace UitgaveBeheer
 {
     public class Startup
     {
@@ -22,7 +25,7 @@ namespace MovieWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSingleton<IMovieDatabase, MovieDatabase>();
+            services.AddSingleton<IExpenseDatabase, ExpenseDatabase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,14 +42,7 @@ namespace MovieWeb
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-            Path.Combine(env.ContentRootPath, "MovieCovers")),
-                RequestPath = "/MovieCovers"
-            });
 
             app.UseRouting();
 
@@ -56,10 +52,7 @@ namespace MovieWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=movie}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=movie}/{action=Index}/{id?}/{next?}");
+                    pattern: "{controller=Expenses}/{action=Index}/{id?}");
             });
         }
     }

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ExpenseListViewModel>
+<h1>Uitgaven overzicht</h1>
+
+<a asp-controller="expenses" asp-action="create" >
+    <input type="button" class="btn btn-primary" value="Toevoegen" />
+</a>
+<br />
+@if (Model == null || !Model.Any())
+{
+    <p>Geen uitgavens beschikbaar</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Omschrijving
+                </th>
+                <th>
+                    Bedrag
+                </th>
+                <th>
+                    Datum
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Description</td>
+                    <td>@item.Value</td>
+                    <td>@item.Date</td>
+                    <td>
+                        <a asp-controller="expenses" asp-action="Detail" asp-route-id="@item.Id">
+                            <input type="button" class="btn btn-primary" value="Detail" />
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="expenses" asp-action="Edit" asp-route-id="@item.Id">
+                            <input type="button" class="btn btn-primary" value="Edit" />
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="expenses" asp-action="Delete" asp-route-id="@item.Id">
+                            <input type="button" class="btn btn-primary" value="Delete" />
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}

@@ -1,0 +1,26 @@
+﻿@model ExpenseDetailViewModel
+
+<div>
+    <label asp-for="Description"></label>
+    <p>@Model.Description</p>
+</div>
+<div>
+    <label asp-for="Categorie"></label>
+    <p>@Model.Categorie</p>
+</div>
+<div>
+    <label asp-for="Value"></label>
+    <p>@Model.Value</p>
+</div>
+<div>
+    <label asp-for="Date"></label>
+    <p>@Model.Date</p>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.PhotoUrl))
+{
+    <div>
+        <label asp-for="PhotoUrl"></label>
+        <a class="btn btn-primary" href="@Model.PhotoUrl" target="_blank">Link</a>
+    </div>
+}
