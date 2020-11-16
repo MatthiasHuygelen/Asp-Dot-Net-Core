@@ -164,6 +164,10 @@ namespace UitgaveBeheer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+
+
+
         public IActionResult Month(DateTime? Date)
         {
             (DateTime start, DateTime end) = Date != null ?
@@ -173,12 +177,17 @@ namespace UitgaveBeheer.Controllers
             var expenses = _expenseDatabase.GetExpenses().Where(x => x.Date >= start)
                                                          .Where(x => x.Date <= end)
                                                          .ToList();
+
             if (expenses.Any())
             {
                 var highestExp = expenses.OrderByDescending(x => x.Value).FirstOrDefault();
                 var lowestExp = expenses.OrderBy(x => x.Value).FirstOrDefault();
                 var MostExpensiveDate = expenses.GroupBy(x => x.Date)
-                                                .Select(x => new { Date = x.Key, Value = x.ToList().Sum(x => x.Value) })
+                                                .Select(x => new
+                                                {
+                                                    Date = x.Key,
+                                                    Value = x.ToList().Sum(x => x.Value)
+                                                })
                                                 .OrderByDescending(x => x.Value)
                                                 .FirstOrDefault();
 

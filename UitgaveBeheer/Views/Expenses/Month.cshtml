@@ -3,8 +3,8 @@
 <h1 class="header">Maand overzicht ( @Model.Date.ToString("yyyy/MM") )</h1>
 
 <div class="buttons">
-    <a class="btn btn-primary" asp-area="" asp-controller="expenses" asp-action="month" asp-route-Date="@Model.Date.AddMonths(-1)" >Vorige maand</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="expenses" asp-action="month" asp-route-Date="@Model.Date.AddMonths(1)" >Volgende maand</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="expenses" asp-action="month" asp-route-Date=@Model.Date.AddMonths(-1) >Vorige maand</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="expenses" asp-action="month" asp-route-Date=@Model.Date.AddMonths(1) >Volgende maand</a>
 </div>
 
 @if (Model.Highest == null && Model.Lowest == null && Model.MostExpensiveDate == null && Model.MostExpensivCategory == null && Model.CheapestCategory == null)
@@ -21,7 +21,7 @@ else
             <a class="btn btn-primary" style="width:100%" asp-area="" asp-controller="expenses" asp-action="detail" asp-route-id="@Model.Highest.Id">Link</a>
         </div>
         <div>
-            <h2>Laagst uitgaven</h2>
+            <h2>Laagste uitgaven</h2>
             <p>Omschrijving : @Model.Lowest.Description</p>
             <p>Bedrag : @Model.Lowest.Value €</p>
             <a class="btn btn-primary" style="width:100%" asp-area="" asp-controller="expenses" asp-action="detail" asp-route-id="@Model.Lowest.Id">Link</a>
@@ -35,12 +35,12 @@ else
         </div>
         <div>
             <h2>Duurste categorie</h2>
-            <p>Datum : @Model.MostExpensivCategory.Description</p>
+            <p>Omschrijving : @Model.MostExpensivCategory.Description</p>
             <p>Bedrag : @Model.MostExpensivCategory.Value €</p>
         </div>
         <div>
             <h2>Goedkoopste categorie</h2>
-            <p>Datum : @Model.CheapestCategory.Description</p>
+            <p>Omschrijving : @Model.CheapestCategory.Description</p>
             <p>Bedrag : @Model.CheapestCategory.Value €</p>
         </div>
     </div>
