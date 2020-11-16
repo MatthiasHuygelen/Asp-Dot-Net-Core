@@ -165,9 +165,6 @@ namespace UitgaveBeheer.Controllers
         }
 
 
-
-
-
         public IActionResult Month(DateTime? Date)
         {
             (DateTime start, DateTime end) = Date != null ?
