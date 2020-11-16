@@ -164,10 +164,10 @@ namespace UitgaveBeheer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Month(DateTime? Date, bool? next)
+        public IActionResult Month(DateTime? Date)
         {
             (DateTime start, DateTime end) = Date != null ?
-                 GenerateMonthDateTimes(Date.Value.AddMonths(next.Value ? 1 : -1).Year, Date.Value.AddMonths(next.Value ? 1 : -1).Month) :
+                 GenerateMonthDateTimes(Date.Value.Year, Date.Value.Month) :
                  GenerateMonthDateTimes(DateTime.Now.Year, DateTime.Now.Month);
 
             var expenses = _expenseDatabase.GetExpenses().Where(x => x.Date >= start)
@@ -196,7 +196,7 @@ namespace UitgaveBeheer.Controllers
                 {
                     Date = start,
                     Highest = new ExpenseDto { Id = highestExp.Id, Description = highestExp.Description, Value = highestExp.Value },
-                    Lowest = new ExpenseDto { Id = highestExp.Id, Description = highestExp.Description, Value = highestExp.Value },
+                    Lowest = new ExpenseDto { Id = lowestExp.Id, Description = lowestExp.Description, Value = lowestExp.Value },
                     MostExpensiveDate = new ExpenseDto { Description = MostExpensiveDate.Date.ToShortDateString(), Value = MostExpensiveDate.Value },
                     MostExpensivCategory = new ExpenseDto { Description = MostExpensivCategory.Categorie, Value = MostExpensivCategory.Value },
                     CheapestCategory = new ExpenseDto { Description = CheapestCategory.Categorie, Value = CheapestCategory.Value }
