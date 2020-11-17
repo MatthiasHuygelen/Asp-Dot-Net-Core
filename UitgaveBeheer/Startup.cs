@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UitgaveBeheer.Database;
+using UitgaveBeheer.Services;
 
 namespace UitgaveBeheer
 {
@@ -26,6 +27,8 @@ namespace UitgaveBeheer
         {
             services.AddControllersWithViews();
             services.AddSingleton<IExpenseDatabase, ExpenseDatabase>();
+            services.AddTransient<IExpensesService, ExpensesService>();
+            services.AddTransient<IPhotoService, PhotoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
