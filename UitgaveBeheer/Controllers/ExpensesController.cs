@@ -159,11 +159,11 @@ namespace UitgaveBeheer.Controllers
             return View(new ExpenseMonthViewModel
             {
                 Date = monthDetail.Date,
-                Highest = new ExpenseVm { Id = monthDetail.Highest.Id, Description = monthDetail.Highest.Description, Value = monthDetail.Highest.Value },
-                Lowest = new ExpenseVm { Id = monthDetail.Lowest.Id, Description = monthDetail.Lowest.Description, Value = monthDetail.Lowest.Value },
-                MostExpensiveDate = new ExpenseVm { Description = monthDetail.MostExpensiveDate.Date.ToShortDateString(), Value = monthDetail.MostExpensiveDate.Value },
-                MostExpensivCategory = new ExpenseVm { Description = monthDetail.MostExpensivCategory.Categorie, Value = monthDetail.MostExpensivCategory.Value },
-                CheapestCategory = new ExpenseVm { Description = monthDetail.CheapestCategory.Categorie, Value = monthDetail.CheapestCategory.Value }
+                Highest = monthDetail.Highest != null ? new ExpenseVm { Id = monthDetail.Highest.Id, Description = monthDetail.Highest.Description, Value = monthDetail.Highest.Value }: null,
+                Lowest = monthDetail.Lowest != null ? new ExpenseVm { Id = monthDetail.Lowest.Id, Description = monthDetail.Lowest.Description, Value = monthDetail.Lowest.Value } : null,
+                MostExpensiveDate = monthDetail.MostExpensiveDate != null ? new ExpenseVm { Description = monthDetail.MostExpensiveDate.Date.ToShortDateString(), Value = monthDetail.MostExpensiveDate.Value } : null,
+                MostExpensivCategory = monthDetail.MostExpensivCategory != null ? new ExpenseVm { Description = monthDetail.MostExpensivCategory.Categorie, Value = monthDetail.MostExpensivCategory.Value } : null,
+                CheapestCategory = monthDetail.CheapestCategory != null ? new ExpenseVm { Description = monthDetail.CheapestCategory.Categorie, Value = monthDetail.CheapestCategory.Value } : null
             });
         }
 
