@@ -12,8 +12,6 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\bin\Debug\
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.csprojAssemblyReference.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.AssemblyInfoInputs.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.AssemblyInfo.cs
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.csproj.CoreCompileInputs.cache
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.RazorAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.RazorAssemblyInfo.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.TagHelpers.input.cache
@@ -39,3 +37,7 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.genruntimeconfig.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.csproj.CopyComplete
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\Razor\Views\Expenses\Month.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.csproj.CoreCompileInputs.cache
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\UitgaveBeheer\obj\Debug\netcoreapp3.1\UitgaveBeheer.MvcApplicationPartsAssemblyInfo.cache

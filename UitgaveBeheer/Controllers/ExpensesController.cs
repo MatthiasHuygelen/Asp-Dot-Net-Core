@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
 using UitgaveBeheer.Models;
@@ -10,11 +11,13 @@ namespace UitgaveBeheer.Controllers
     {
         private readonly IExpensesService _expensesService;
         private readonly IPhotoService _photoService;
+        private readonly IMapper _mapper;
 
-        public ExpensesController(IExpensesService expensesService , IPhotoService photoService)
+        public ExpensesController(IExpensesService expensesService, IPhotoService photoService, IMapper mapper)
         {
             _expensesService = expensesService;
             _photoService = photoService;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -36,15 +39,7 @@ namespace UitgaveBeheer.Controllers
         public IActionResult Detail([FromRoute] int id)
         {
             var expense = _expensesService.GetById(id);
-
-            return View(new ExpenseDetailViewModel
-            {
-                Description = expense.Description,
-                Date = expense.Date,
-                Value = expense.Value,
-                Categorie = expense.Categorie,
-                PhotoUrl = expense.PhotoUrl
-            });
+            return View(_mapper.Map<ExpenseDetailViewModel>(expense));
         }
 
         public IActionResult Create()
