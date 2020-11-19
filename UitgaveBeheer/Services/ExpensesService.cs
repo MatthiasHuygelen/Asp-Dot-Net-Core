@@ -27,7 +27,7 @@ namespace UitgaveBeheer.Services
                 Description = expense.Description,
                 Date = expense.Date,
                 Value = expense.Value,
-                Categorie = expense.Categorie,
+                Categorie = expense.Categorie.Description,
                 PhotoUrl = expense.PhotoUrl
             };
         }
@@ -52,7 +52,6 @@ namespace UitgaveBeheer.Services
                 Description = expense.Description,
                 Date = expense.Date,
                 Value = expense.Value,
-                Categorie = expense.Categorie,
                 PhotoUrl = expense.PhotoUrl
             };
 
@@ -66,7 +65,6 @@ namespace UitgaveBeheer.Services
                 Description = expense.Description,
                 Date = expense.Date,
                 Value = expense.Value,
-                Categorie = expense.Categorie,
                 PhotoUrl = expense.PhotoUrl
             };
 
@@ -101,7 +99,7 @@ namespace UitgaveBeheer.Services
                                                 .OrderByDescending(x => x.Value)
                                                 .FirstOrDefault();
 
-                var groupedCategories = expenses.GroupBy(x => x.Categorie)
+                var groupedCategories = expenses.GroupBy(x => x.Categorie.Description)
                                                 .Select(x => new
                                                 {
                                                     Categorie = x.Key,

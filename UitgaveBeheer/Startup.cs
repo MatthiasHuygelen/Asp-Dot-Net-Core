@@ -6,10 +6,12 @@ using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UitgaveBeheer.Database;
+using UitgaveBeheer.Externsions;
 using UitgaveBeheer.Services;
 
 namespace UitgaveBeheer
@@ -26,11 +28,18 @@ namespace UitgaveBeheer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            #region services
             services.AddControllersWithViews();
             services.AddSingleton<IExpenseDatabase, ExpenseDatabase>();
             services.AddTransient<IExpensesService, ExpensesService>();
-            services.AddTransient<IPhotoService, PhotoService>();
+            services.AddPhotoService();
             services.AddAutoMapper(typeof(Startup));
+            services.AddDbContext<ExpenseDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                );
+
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

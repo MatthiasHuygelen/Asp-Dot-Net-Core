@@ -18,25 +18,21 @@ namespace UitgaveBeheer.Database
 
     public class ExpenseDatabase : IExpenseDatabase
     {
-        private int _counter;
-        private readonly List<Expense> _Expenses;
+        private readonly ExpenseDbContext _expenseDbContext;
 
-        public ExpenseDatabase()
+        public ExpenseDatabase(ExpenseDbContext expenseDbContext)
         {
-            if (_Expenses == null)
-            {
-                _Expenses = new List<Expense>();
-            }
+            _expenseDbContext = expenseDbContext;
         }
 
         public Expense GetExpense(int id)
         {
-            return _Expenses.FirstOrDefault(x => x.Id == id);
+            return _expenseDbContext.Expenses.FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<Expense> GetExpenses()
         {
-            return _Expenses;
+            return _expenseDbContext.Expenses.ToList();
         }
 
         public Expense Insert(Expense Expense)

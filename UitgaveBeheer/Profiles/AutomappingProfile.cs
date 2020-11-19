@@ -12,6 +12,7 @@ namespace UitgaveBeheer.Profiles
         public AutomappingProfile()
         {
             CreateMap<ExpenseDetailDto, ExpenseDetailViewModel>().ReverseMap();
+            CreateMap<ExpenseDetailDto, ExpenseEditViewModel>().ReverseMap();
         }
     }
 }
