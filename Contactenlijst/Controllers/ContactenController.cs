@@ -25,7 +25,6 @@ namespace Contactenlijst.Controllers
 
         public IActionResult Index()
         {
-            throw new DivideByZeroException();
             var vm = _contactenDatabase.GetContacts()
                 .Select(contact => new ContactListViewModel
                 {

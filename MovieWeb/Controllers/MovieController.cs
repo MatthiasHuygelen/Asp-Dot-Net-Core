@@ -1,24 +1,31 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MovieWeb.Database;
 using MovieWeb.Models;
+using MovieWeb.Services;
 using System;
 using System.Linq;
 
 namespace MovieWeb.Controllers
 {
+    [Authorize]
     public class MovieController : Controller
     {
-        private readonly IMovieDatabase _movieDatabase;
+        private readonly IMovieService _movieDatabase;
+        private readonly IMapper _mapper;
 
-        public MovieController(IMovieDatabase movieDatabase)
+        public MovieController(IMovieService movieDatabase , IMapper mapper)
         {
             _movieDatabase = movieDatabase;
+            _mapper = mapper;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var movies = _movieDatabase.GetMovies()
-                                       .Select(x => new MovieListViewModel { Title = x.Title, Description = x.Description, Id = x.Id });
+                                       .Select(x => _mapper.Map<MovieListViewModel>(x));
 
             return View(movies);
         }
@@ -51,34 +58,21 @@ namespace MovieWeb.Controllers
         {
             if (TryValidateModel(movie))
             {
-                _movieDatabase.Insert(new Movie
-                {
-                    Title = movie.Title,
-                    Description = movie.Description,
-                    Genre = movie.Genre,
-                    Rating = movie.Rating,
-                    ReleaseDate = movie.ReleaseDate
-                });
+                _movieDatabase.Insert( _mapper.Map<MovieDto>(movie));
                 return RedirectToAction(nameof(Index));
             }
+
             return View();
         }
 
         public IActionResult Edit([FromRoute] int id)
         {
             var dbMovie = _movieDatabase.GetMovie(id);
-
-            EditMovieViewModel vm = new EditMovieViewModel();
-            vm.Title = dbMovie.Title;
-            vm.Description = dbMovie.Description;
-            vm.ReleaseDate = dbMovie.ReleaseDate;
-            vm.Genre = dbMovie.Genre;
-            vm.Rating = dbMovie.Rating;
-
-            return View(vm);
+            return View(_mapper.Map<EditMovieViewModel>(dbMovie));
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit([FromRoute] int id, [FromForm] EditMovieViewModel movie)
         {
             if (!TryValidateModel(movie))
@@ -86,34 +80,20 @@ namespace MovieWeb.Controllers
                 return View();
             }
 
-            _movieDatabase.Update(id, new Movie
-            {
-                Title = movie.Title,
-                Description = movie.Description,
-                Genre = movie.Genre,
-                Rating = movie.Rating,
-                ReleaseDate = movie.ReleaseDate,
-            });
-
+            _movieDatabase.Update(id, _mapper.Map<MovieDto>(movie));
             return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Delete([FromRoute] int id)
         {
             var dbMovie = _movieDatabase.GetMovie(id);
-
-            var vm = new MovieDeleteViewModel();
-            vm.Id = dbMovie.Id;
-            vm.Title = dbMovie.Title;
-
-            return View(vm);
+            return View(_mapper.Map<MovieDeleteViewModel>(dbMovie));
         }
 
         [HttpPost]
         public IActionResult ConfirmDelete([FromRoute]int id)
         {
             _movieDatabase.Delete(id);
-
             return RedirectToAction(nameof(Index));
         }
     }

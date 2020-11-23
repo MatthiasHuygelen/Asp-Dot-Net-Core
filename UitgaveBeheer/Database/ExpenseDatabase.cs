@@ -37,24 +37,24 @@ namespace UitgaveBeheer.Database
 
         public Expense Insert(Expense Expense)
         {
-            _counter++;
-            Expense.Id = _counter;
-            _Expenses.Add(Expense);
+            _expenseDbContext.Expenses.Add(Expense);
+            _expenseDbContext.SaveChanges();
             return Expense;
         }
 
         public void Delete(int id)
         {
-            var Expense = _Expenses.SingleOrDefault(x => x.Id == id);
+            var Expense = _expenseDbContext.Expenses.SingleOrDefault(x => x.Id == id);
             if (Expense != null)
             {
-                _Expenses.Remove(Expense);
+                _expenseDbContext.Expenses.Remove(Expense);
+                _expenseDbContext.SaveChanges();
             }
         }
 
         public void Update(int id, Expense updatedExpense)
         {
-            var Expense = _Expenses.SingleOrDefault(x => x.Id == id);
+            var Expense = _expenseDbContext.Expenses.SingleOrDefault(x => x.Id == id);
             if (Expense != null)
             {
                 Expense.Description = updatedExpense.Description;
@@ -62,6 +62,7 @@ namespace UitgaveBeheer.Database
                 Expense.Value = updatedExpense.Value;
                 Expense.Categorie = updatedExpense.Categorie;
                 Expense.PhotoUrl = updatedExpense.PhotoUrl;
+                _expenseDbContext.SaveChanges();
             }
         }
     }

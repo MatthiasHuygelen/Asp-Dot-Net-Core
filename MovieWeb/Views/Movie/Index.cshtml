@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<MovieListViewModel>
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 
 <h1>Movies</h1>
 
@@ -27,21 +28,31 @@ else
                 <tr>
                     <td>@movie.Title</td>
                     <td>@movie.Description</td>
-                    <td>
-                        <a asp-controller="movie" asp-action="detail" asp-route-id="@movie.Id">
-                            <input type="button" class="btn btn-primary" value="Detail" />
-                        </a>
-                    </td>
-                    <td>
-                        <a asp-controller="movie" asp-action="Edit" asp-route-id="@movie.Id">
-                            <input type="button" class="btn btn-primary" value="Edit" />
-                        </a>
-                    </td>
-                    <td>
-                        <a asp-controller="movie" asp-action="Delete" asp-route-id="@movie.Id">
-                            <input type="button" class="btn btn-primary" value="Delete" />
-                        </a>
-                    </td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <td>
+                            <a asp-controller="movie" asp-action="detail" asp-route-id="@movie.Id">
+                                <input type="button" class="btn btn-primary" value="Detail" />
+                            </a>
+                        </td>
+                        <td>
+                            <a asp-controller="movie" asp-action="Edit" asp-route-id="@movie.Id">
+                                <input type="button" class="btn btn-primary" value="Edit" />
+                            </a>
+                        </td>
+                        <td>
+                            <a asp-controller="movie" asp-action="Delete" asp-route-id="@movie.Id">
+                                <input type="button" class="btn btn-primary" value="Delete" />
+                            </a>
+                        </td>
+
+                    }
+                    else
+                    {
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    }
                 </tr>
             }
         </tbody>
