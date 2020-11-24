@@ -216,3 +216,6 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netco
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\MovieWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
