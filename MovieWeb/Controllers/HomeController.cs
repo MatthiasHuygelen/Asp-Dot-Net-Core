@@ -17,6 +17,7 @@ namespace MovieWeb.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Index started");
             return View();
         }
 
@@ -30,5 +31,7 @@ namespace MovieWeb.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+      
     }
 }

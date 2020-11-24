@@ -96,5 +96,11 @@ namespace MovieWeb.Controllers
             _movieDatabase.Delete(id);
             return RedirectToAction(nameof(Index));
         }
+
+        [Route("/oeps")]
+        public IActionResult Oeps()
+        {
+            return View();
+        }
     }
 }

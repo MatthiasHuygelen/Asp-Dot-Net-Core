@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UitgaveBeheer", "UitgaveBeh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependency", "Dependency\Dependency.csproj", "{7AF83C8C-1C95-4A27-8B63-D88C74E0590B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication", "Authentication\Authentication.csproj", "{05B9668B-9F19-4873-A688-472B6F37152E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication", "Authentication\Authentication.csproj", "{05B9668B-9F19-4873-A688-472B6F37152E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding", "Scaffolding\Scaffolding.csproj", "{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{1C5759FA-9633-479D-B1B1-B61B36E0F065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{05B9668B-9F19-4873-A688-472B6F37152E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B9668B-9F19-4873-A688-472B6F37152E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B9668B-9F19-4873-A688-472B6F37152E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
