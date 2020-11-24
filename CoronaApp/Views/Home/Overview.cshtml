@@ -1,0 +1,46 @@
+﻿@model CoronaApp.Models.OverviewViewModel
+
+@{
+    ViewData["Title"] = "Overview";
+}
+
+<h1>Overview ( @Model.Date.ToString("yyyy/MM") )</h1>
+
+<div class="buttons">
+    <a class="btn btn-primary" asp-area="" asp-controller="home" asp-action="overview" asp-route-date=@Model.Date.AddMonths(-1)>Vorige maand</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="home" asp-action="overview" asp-route-date=@Model.Date.AddMonths(1)>Volgende maand</a>
+</div>
+
+@if (Model == null || !Model.Visits.Any())
+{
+    <strong>Geen aanwezigen</strong>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Naam
+                </th>
+                <th>
+                    Datum
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Visits)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding", "Scaffolding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{1C5759FA-9633-479D-B1B1-B61B36E0F065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoronaApp", "CoronaApp\CoronaApp.csproj", "{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C5759FA-9633-479D-B1B1-B61B36E0F065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
