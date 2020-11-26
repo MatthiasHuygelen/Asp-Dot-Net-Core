@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Contactenlijst.Database;
+﻿using Contactenlijst.Database;
 using Contactenlijst.Domain;
 using Contactenlijst.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
+using System.Linq;
 
 namespace Contactenlijst.Controllers
 {

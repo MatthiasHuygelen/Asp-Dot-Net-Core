@@ -1,5 +1,3 @@
-using System;
-
 namespace Scaffolding.Models
 {
     public class ErrorViewModel

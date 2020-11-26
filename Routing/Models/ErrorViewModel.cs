@@ -1,5 +1,3 @@
-using System;
-
 namespace Routing.Models
 {
     public class ErrorViewModel

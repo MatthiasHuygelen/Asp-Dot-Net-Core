@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MovieWeb.Models;
-using System;
 using System.Diagnostics;
 
 namespace MovieWeb.Controllers

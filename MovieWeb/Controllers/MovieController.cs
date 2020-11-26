@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MovieWeb.Database;
 using MovieWeb.Models;
 using MovieWeb.Services;
 using System;

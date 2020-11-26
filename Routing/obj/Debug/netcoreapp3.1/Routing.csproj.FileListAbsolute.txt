@@ -38,7 +38,6 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Routing\obj\Debug\netcoreapp3.1\Routing.g
 C:\Users\MHGBK54\source\repos\MovieWeb\Routing\obj\Debug\netcoreapp3.1\Routing.csproj.CopyComplete
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\Routing.exe
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\Routing.deps.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\bin\Debug\netcoreapp3.1\Routing.runtimeconfig.json
@@ -54,6 +53,9 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcor
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.RazorAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.RazorAssemblyInfo.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\staticwebassets\Routing.StaticWebAssets.Manifest.cache
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\staticwebassets\Routing.StaticWebAssets.xml
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\scopedcss\bundle\Routing.styles.css
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.TagHelpers.input.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.TagHelpers.output.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.RazorCoreGenerate.cache
@@ -68,8 +70,6 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcor
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.RazorTargetAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.RazorTargetAssemblyInfo.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.Views.pdb
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\staticwebassets\Routing.StaticWebAssets.Manifest.cache
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\staticwebassets\Routing.StaticWebAssets.xml
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.dll
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.pdb
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Routing\obj\Debug\netcoreapp3.1\Routing.genruntimeconfig.cache

@@ -1,5 +1,3 @@
-using System;
-
 namespace Dependency.Models
 {
     public class ErrorViewModel

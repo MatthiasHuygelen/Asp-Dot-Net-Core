@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependency", "Dependency\De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication", "Authentication\Authentication.csproj", "{05B9668B-9F19-4873-A688-472B6F37152E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding", "Scaffolding\Scaffolding.csproj", "{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding", "Scaffolding\Scaffolding.csproj", "{8ACE87ED-C0A9-4D28-92D4-33089C2ADF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{1C5759FA-9633-479D-B1B1-B61B36E0F065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPages", "RazorPages\RazorPages.csproj", "{1C5759FA-9633-479D-B1B1-B61B36E0F065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoronaApp", "CoronaApp\CoronaApp.csproj", "{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoronaApp", "CoronaApp\CoronaApp.csproj", "{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{74257842-E1C2-4AAD-926D-9571D1F63710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject", "XUnitTestProject\XUnitTestProject.csproj", "{95A04E84-0359-4104-BD90-A84BE10D30A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E4A04E8-34F0-4BCB-AEA0-DEBDD829609E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74257842-E1C2-4AAD-926D-9571D1F63710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74257842-E1C2-4AAD-926D-9571D1F63710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74257842-E1C2-4AAD-926D-9571D1F63710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74257842-E1C2-4AAD-926D-9571D1F63710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A04E84-0359-4104-BD90-A84BE10D30A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A04E84-0359-4104-BD90-A84BE10D30A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A04E84-0359-4104-BD90-A84BE10D30A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A04E84-0359-4104-BD90-A84BE10D30A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

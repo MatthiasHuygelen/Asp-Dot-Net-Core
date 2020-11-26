@@ -1,5 +1,3 @@
-using System;
-
 namespace UitgaveBeheer.Models
 {
     public class ErrorViewModel

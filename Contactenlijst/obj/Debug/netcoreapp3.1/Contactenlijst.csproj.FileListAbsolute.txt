@@ -1,6 +1,5 @@
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\Contactenlijst.exe
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\Contactenlijst.deps.json
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\bin\Debug\netcoreapp3.1\Contactenlijst.runtimeconfig.json
@@ -16,9 +15,16 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.RazorAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.RazorAssemblyInfo.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\staticwebassets\Contactenlijst.StaticWebAssets.Manifest.cache
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\staticwebassets\Contactenlijst.StaticWebAssets.xml
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\scopedcss\bundle\Contactenlijst.styles.css
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.TagHelpers.input.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.TagHelpers.output.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.RazorCoreGenerate.cache
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Create.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Delete.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Detail.cshtml.g.cs
+C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Edit.cshtml.g.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Index.cshtml.g.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -28,13 +34,7 @@ C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.RazorTargetAssemblyInfo.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.RazorTargetAssemblyInfo.cs
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.Views.pdb
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\staticwebassets\Contactenlijst.StaticWebAssets.Manifest.cache
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\staticwebassets\Contactenlijst.StaticWebAssets.xml
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.dll
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.pdb
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.genruntimeconfig.cache
 C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Contactenlijst.csproj.CopyComplete
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Create.cshtml.g.cs
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Detail.cshtml.g.cs
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Edit.cshtml.g.cs
-C:\Users\MHGBK54\source\repos\MovieWeb\Asp-Dot-Net-Core\Contactenlijst\obj\Debug\netcoreapp3.1\Razor\Views\Contacten\Delete.cshtml.g.cs

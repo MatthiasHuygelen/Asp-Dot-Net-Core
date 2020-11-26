@@ -1,5 +1,3 @@
-using System;
-
 namespace CoronaApp.Models
 {
     public class ErrorViewModel

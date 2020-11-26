@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Dependency.Models;
+using Dependency.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Dependency.Models;
-using Dependency.Services;
+using System.Diagnostics;
 
 namespace Dependency.Controllers
 {

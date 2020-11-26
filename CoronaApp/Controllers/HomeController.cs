@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CoronaApp.Data;
+using CoronaApp.Domain;
+using CoronaApp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using CoronaApp.Models;
-using CoronaApp.Data;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using CoronaApp.Domain;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
+using Utility;
 
 namespace CoronaApp.Controllers
 {
@@ -62,10 +61,12 @@ namespace CoronaApp.Controllers
         public async Task<IActionResult> Overview(DateTime? date)
         {
             (DateTime start, DateTime end) = date != null ?
-                GenerateMonthDateTimes(date.Value.Year, date.Value.Month) :
-                GenerateMonthDateTimes(DateTime.Now.Year, DateTime.Now.Month);
+                MonthUtil.GenerateStartEnd(date.Value.Year, date.Value.Month) :
+                MonthUtil.GenerateStartEnd(DateTime.Now.Year, DateTime.Now.Month);
 
             var user = await _userManager.GetUserAsync(HttpContext.User);
+            var roles = await _userManager.GetRolesAsync(user);
+
             var visits = _dbContext.Visits.Include(x => x.Company)
                                           .Where(x => x.Date >= start)
                                           .Where(x => x.Date <= end)
@@ -79,11 +80,6 @@ namespace CoronaApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public static (DateTime Start, DateTime End) GenerateMonthDateTimes(int year, int month)
-        {
-            return (new DateTime(year, month, 1), new DateTime(year, month, DateTime.DaysInMonth(year, month), 23,59,59));
         }
     }
 }
